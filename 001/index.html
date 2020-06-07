@@ -39,6 +39,27 @@
    padding:5px;	 	 
 }
 </style>
+<style type="text/css">
+#div1 {width:198px; height:66px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+<script type="text/javascript">
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+</script>
 </head>
 <body bgcolor="pink">
  <a  href="https://www.microsoft.com/zh-cn/microsoft-365/excel" target="_blank"><table border="1" bgcolor="green" > 
@@ -49,7 +70,7 @@
     </a>
        
     <p align="right" style="background-color：green"><embed height="100" width="100" src="./music/Shape of you.mp3"></embed>
-<div id="header"><h1 style="background-color:yellow" align="center"><font color="green">Ideason</font></h1>
+<div id="header"><h1 style="background-color:yellow" align="center"><font color="green">Ideason HE</font></h1>
     </div>  
     <div id="section">
         <form  style="background-color:aqua" action="http://xhu.aiyy.org/index.html" target="_blank">
@@ -81,8 +102,12 @@
     lalalala.</br>
 hahahaha.</br>
     </address>
+<p>请把 W3School 的图片拖放到矩形中：</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br />
  <h1 style="font-family:times;color:red">Mars:<a href="https://www.nasa.gov/" target="_blank">
-     <img src="./image/Mars.jpg" width="200" height="200" /></a>
+     <img  draggable="true" src="./image/Mars.jpg" width="200" height="200" /></a>
 </h1>
 
 </body>
