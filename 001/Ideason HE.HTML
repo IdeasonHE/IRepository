@@ -1,40 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ideason HE</title>
-    
-</head>
-<body bgcolor="pink">
- <a  href="https://www.microsoft.com/zh-cn/microsoft-365/excel" target="_blank"><table border="1" bgcolor="green" > 
-    <td width="60" height="50">Excel</td>
-   </table>
-    </a>
-       
-<embed height="100" width="100" src="./music/Shape of you.mp3"></embed>
-    
- <h1 style="background-color:yellow" align="center"><font color="green">Ideason HE</font></h1>
-    
-  
+<html>
+<body>
 
-<iframe src="https://www.nais.org.cn/login.jsp" width="200" height="200"></iframe>
-   
-    
-<script language="javascript">
-window.open 
-’https://www.nais.org.cn/login.jsp’
-’newwindow’
-height=100 
-width=400 
-top=0 
-left=0 
-toolbar=no 
-menubar，scrollbars 
-resizable=no 
-location=no 
-status=no 
-</script> 
- 
+<h2>JavaScript 能够验证输入</h2>
+
+<p>请输入 1 与 10 之间的数：</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">提交</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x, text;
+
+  // 获取 id="numb" 的输入字段的值
+  x = document.getElementById("numb").value;
+
+  // 如果 x 不是数字或小于 1 或大于 10
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "输入无效";
+  } else {
+    text = "输入有效";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
 
 </body>
 </html>
+
